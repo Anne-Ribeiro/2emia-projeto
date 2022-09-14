@@ -10,4 +10,4 @@ Um site de cadastro de receitas pessoais, possibilitando a acessibilidade dos us
 - Mateus Felipe da Silveira Vieira - rm14598
 
 ###### Link da Wiki (documentação e estrutura): 
-[link](https://github.com/Anne-Ribeiro/2emia-projeto/wiki)
+[Link da Wiki](https://github.com/Anne-Ribeiro/2emia-projeto/wiki)
