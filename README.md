@@ -9,9 +9,5 @@ Um site de cadastro de receitas pessoais, possibilitando a acessibilidade dos us
 - Maria Clara Gomes Gonçalves de Almeida - rm11959
 - Mateus Felipe da Silveira Vieira - rm14598
 
-[link](https://github.com/Anne-Ribeiro/2emia-projeto/wiki)
-
 ###### Link da Wiki (documentação e estrutura): 
-[Link](destino)
-[destino]:https://github.com/Anne-Ribeiro/2emia-projeto/wiki
-
+[link](https://github.com/Anne-Ribeiro/2emia-projeto/wiki)
