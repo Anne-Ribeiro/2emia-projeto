@@ -1,0 +1,35 @@
+/*Smartphone Portait*/
+
+body{
+    background-color: #aadbfc;
+}
+
+/*Smartphone Landscape*/
+@media (min-width: 576px) { /* a partir de 576px eu quero mudar a pagina ex: muda a cor*/
+    body{
+        background-color: #c0aedd;
+    }  
+}
+
+/*Tablet Portrait*/
+@media (min-width: 768px) { /*muda a cor do fundo e da letra quando vira Ipad(768px)*/
+    body{
+        background-color: #aeddc0;
+        color: #42634e;
+    }  
+}
+
+/*Tablet Landscape*/
+@media (min-width: 992px) { /*muda a cor do fundo e da letra quando vira Ipad deitado(992px)*/
+    body{
+        background-color: #cfadb0;
+    }  
+}
+
+/*Notebook/PCs*/
+@media (min-width: 1200px) { /*muda a cor do fundo e da letra quando vira Pc(1200px)*/
+    body{
+        background-color: #e7e2b3;
+        color: #000000;
+    }  
+}
