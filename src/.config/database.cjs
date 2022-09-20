@@ -1,14 +1,14 @@
 /** @format */
 
-import mongoose, { mongo } from "mongoose";
-import dotenv from "dotenv"; /* Importando leitor de variáveis de ambiente*/
+const mongoose = require("mongoose");
+const dotenv = require("dotenv"); /* Importando leitor de variáveis de ambiente*/
 
 dotenv.config(); /* Configurando o leitor */
 
-export const conexao = async () => {
+const conexao = async () => {
   let localdb = "mongodb://localhost/reddito-teste"; /* Banco de Dados Local */
 
-  let conexao_string: string = process.env.CONEXAO_STRING || localdb;
+  let conexao_string = process.env.CONEXAO_STRING || localdb;
   /* Pega a variável de ambiente e se não conseguir utiliza a env local */
 
   if (process.env.Node_env == "test" && conexao_string == localdb) {
@@ -23,3 +23,5 @@ export const conexao = async () => {
     ); /* Conecta ao Mongo DB e printa um log na tela */
   });
 };
+
+module.exports = conexao;

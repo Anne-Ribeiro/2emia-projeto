@@ -1,6 +1,6 @@
 /** @format */
 
-import { app, port } from "./.config/server";
+import { app, port } from "./.config/server.cjs";
 
 import { createToken, verifyToken } from "./routes/middleware/Tokens";
 
