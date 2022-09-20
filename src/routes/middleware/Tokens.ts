@@ -1,7 +1,8 @@
 /** @format */
 
-import jwt from "jsonwebtoken";
+import jwt from "jsonwebtoken"; /* Biblioteca de Json Web Token utilizada para autenticação, documentação: https://www.npmjs.com/package/jsonwebtoken */
 
+/* Tipos Aceitaveis de valores */
 interface createToken {
   msg: string;
   secret: string;
@@ -13,9 +14,17 @@ interface verifyToken {
   secret: string;
 }
 
-export function createToken(tkparam: createToken): void | string {
+interface data {
+  jwtoken: string;
+  verified: boolean;
+  return_verify: any;
+  err?: any;
+}
+
+function createToken(tkparam: createToken): void | string {
   /* Exportando a função como padrão */
 
+  /* Tenta criar um token válido */
   try {
     let token = jwt.sign(
       {
@@ -25,24 +34,37 @@ export function createToken(tkparam: createToken): void | string {
       { expiresIn: tkparam.time },
     );
 
-    console.log(token);
-
     return token;
   } catch (err) {
+    /* Se não conseguir da um erro e volta por onde foi chamado */
     console.error(`❌ - Não foi possivel criar um token válido: ${err}`);
     return;
   }
 }
 
-export function verifyToken(tkparam: verifyToken) {
+function verifyToken(tkparam: verifyToken): data {
+  /* Tenta verificar a autenticidade do token */
   try {
     let token = jwt.verify(tkparam.analise_token, tkparam.secret);
 
     console.log(token);
 
-    return token;
+    return {
+      jwtoken: tkparam.analise_token,
+      verified: true,
+      return_verify: token,
+    };
   } catch (err) {
+    /* Se não conseguir dá um erro e retorna para onde foi chamado */
+
     console.error(`❌ - Não foi possivel criar um token válido: ${err}`);
-    return;
+    return {
+      jwtoken: tkparam.analise_token,
+      verified: false,
+      return_verify: undefined,
+      err: err,
+    };
   }
 }
+
+export { createToken, verifyToken }; /* Exportando Funções */

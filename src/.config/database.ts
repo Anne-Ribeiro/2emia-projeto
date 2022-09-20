@@ -1,6 +1,6 @@
 /** @format */
 
-import mongoose, { mongo } from "mongoose";
+import mongoose from "mongoose";
 import dotenv from "dotenv"; /* Importando leitor de variáveis de ambiente*/
 
 dotenv.config(); /* Configurando o leitor */
