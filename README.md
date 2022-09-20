@@ -2,8 +2,7 @@
 
 ![GitHub](https://img.shields.io/github/license/Anne-Ribeiro/2emia-projeto?style=for-the-badge)
 
-
-# Esta Branch ** Não irá pro projeto final ** 
+# Esta Branch ** Não irá pro projeto final **
 
 # Reddito
 

@@ -10,9 +10,13 @@ const port = process.env.PORT || 7777; /* Definindo a porta de execução */
 app.use(helmet()); /* Utilizando a lib do helmet */
 app.use(compression()); /* Utilizando a lib compression */
 
-app.use(express.urlencoded({ extended: false }));
+app.use(
+  express.urlencoded({ extended: false }),
+); /* Setando um parseador de Json */
 
-app.set("views", "EJS");
-app.use(express.static("./assets"));
+app.set("views", "EJS"); /* Alterando a pasta padrão views para a EJS */
+app.use(
+  express.static("./assets"),
+); /* Setando a pasta assets para servir arquivos estáticos */
 
-export { app, port };
+export { app, port }; /* Exportando variáveis */

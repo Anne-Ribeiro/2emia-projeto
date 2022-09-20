@@ -14,6 +14,6 @@ const port = process.env.PORT || 7777; /* Definindo a porta de execução */
 exports.port = port;
 app.use((0, helmet_1.default)()); /* Utilizando a lib do helmet */
 app.use((0, compression_1.default)()); /* Utilizando a lib compression */
-app.use(express_1.default.urlencoded({ extended: false }));
-app.set("views", "EJS");
-app.use(express_1.default.static("./assets"));
+app.use(express_1.default.urlencoded({ extended: false })); /* Setando um parseador de Json */
+app.set("views", "EJS"); /* Alterando a pasta padrão views para a EJS */
+app.use(express_1.default.static("./assets")); /* Setando a pasta assets para servir arquivos estáticos */
