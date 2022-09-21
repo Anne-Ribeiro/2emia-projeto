@@ -1,4 +1,0 @@
-/** @format */
-
-"use strict";
-/** @format */

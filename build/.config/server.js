@@ -14,11 +14,11 @@ const app = (0, express_1.default)(); /* Instanciando o express */
 exports.app = app;
 const port = process.env.PORT || 7777; /* Definindo a porta de execução */
 exports.port = port;
-app.set("views", "./src/EJS"); /* Alterando a pasta padrão views para a EJS */
 app.use((0, helmet_1.default)()); /* Utilizando a lib do helmet */
 app.use((0, compression_1.default)()); /* Utilizando a lib compression */
+app.set("views", "./src/EJS"); /* Alterando a pasta padrão views para a EJS */
 app.use(express_1.default.urlencoded({ extended: false })); /* Setando um parseador de Json */
-app.use(express_1.default.static("./assets")); /* Setando a pasta assets para servir arquivos estáticos */
+app.use(express_1.default.static("./src/assets")); /* Setando a pasta assets para servir arquivos estáticos */
 let routes = [
     (0, index_1.default)(app),
 ]; /* Executando todas a rotas e passando o express para cada uma */

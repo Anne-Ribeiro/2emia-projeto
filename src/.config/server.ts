@@ -10,17 +10,17 @@ import index from "../routes/index";
 const app = express(); /* Instanciando o express */
 const port = process.env.PORT || 7777; /* Definindo a porta de execução */
 
-app.set("views", "./src/EJS"); /* Alterando a pasta padrão views para a EJS */
-
 app.use(helmet()); /* Utilizando a lib do helmet */
 app.use(compression()); /* Utilizando a lib compression */
+
+app.set("views", "./src/EJS"); /* Alterando a pasta padrão views para a EJS */
 
 app.use(
   express.urlencoded({ extended: false }),
 ); /* Setando um parseador de Json */
 
 app.use(
-  express.static("./assets"),
+  express.static("./src/assets"),
 ); /* Setando a pasta assets para servir arquivos estáticos */
 
 let routes = [
