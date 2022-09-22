@@ -4,6 +4,7 @@
   "description": "Um site de cadastro de receitas pessoais, possibilitando a acessibilidade dos usuários de forma simples e intuitiva. Também promovemos o compartilhamento delas e a opção de dar notas e observações para as receitas feitas.",
   "main": "./build/trigger.js",
   "scripts": {
+    "postinstall": "node ./src/assets/SCSS/link-bootsrap.js",
     "start": "node ./build/trigger.js",
     "format": "npx prettier . -w",
     "transpile": "npx tsc",

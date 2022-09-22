@@ -1,5 +1,19 @@
 /** @format */
 
-body {
-  background-color: red;
+/* Path */
+@import url(reset.css);
+@import url(/scss/bootstrap.scss);
+
+/* Custom Variables*/
+$back-font-color: rgba(136, 176, 113, 50%);
+$footer-color: rgba(62, 81, 51, 100%);
+$adress-color: rgba(107, 138, 83, 100%);
+$btn-color: rgba(125, 173, 97, 100%);
+
+$white: rgba(255, 255, 255, 100%);
+$black: rgba(0, 0, 0, 100%);
+
+btn {
+  :hover {
+  }
 }

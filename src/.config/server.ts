@@ -6,6 +6,7 @@ import compression from "compression"; /* Lib pra melhorar a performace com o gz
 
 /* Importando Rotas manuamente */
 import index from "../routes/index";
+import showcase from "../routes/showcase";
 
 const app = express(); /* Instanciando o express */
 const port = process.env.PORT || 7777; /* Definindo a porta de execução */
@@ -19,12 +20,15 @@ app.use(
   express.urlencoded({ extended: false }),
 ); /* Setando um parseador de Json */
 
-app.use(
-  express.static("./src/assets"),
-); /* Setando a pasta assets para servir arquivos estáticos */
+let statics = [
+  app.use(
+    express.static("./src/assets"),
+  ) /* Setando a pasta assets para servir arquivos estáticos */,
+];
 
 let routes = [
   index(app),
+  showcase(app),
 ]; /* Executando todas a rotas e passando o express para cada uma */
 
 export { app, port }; /* Exportando variáveis */
