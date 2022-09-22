@@ -1,8 +1,8 @@
 /** @format */
 
 /* Path */
-@import url(reset.css);
-@import url(/scss/bootstrap.scss);
+@use "./reset.scss";
+@use "./bootstrap/bootstrap.scss";
 
 /* Custom Variables*/
 $back-font-color: rgba(136, 176, 113, 50%);
@@ -12,6 +12,9 @@ $btn-color: rgba(125, 173, 97, 100%);
 
 $white: rgba(255, 255, 255, 100%);
 $black: rgba(0, 0, 0, 100%);
+
+html {
+}
 
 btn {
   :hover {
