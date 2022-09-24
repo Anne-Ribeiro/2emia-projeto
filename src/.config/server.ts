@@ -5,8 +5,9 @@ import helmet from "helmet"; /* Lib pra proteger o site contra vunerabilidades c
 import compression from "compression"; /* Lib pra melhorar a performace com o gzip comprimindo dados, recomendado pela documentação: https://expressjs.com/pt-br/advanced/best-practice-performance.html*/
 
 /* Importando Rotas manuamente */
-import index from "../routes/index";
+import index from "../routes/test";
 import showcase from "../routes/showcase";
+import registro from "../routes/registro";
 
 const app = express(); /* Instanciando o express */
 const port = process.env.PORT || 7777; /* Definindo a porta de execução */
@@ -29,6 +30,7 @@ let statics = [
 let routes = [
   index(app),
   showcase(app),
+  registro(app),
 ]; /* Executando todas a rotas e passando o express para cada uma */
 
 export { app, port }; /* Exportando variáveis */

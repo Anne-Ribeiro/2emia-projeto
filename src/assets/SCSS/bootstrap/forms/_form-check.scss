@@ -1,5 +1,3 @@
-/** @format */
-
 //
 // Check/radio
 //
@@ -31,7 +29,7 @@
 .form-check-input {
   width: $form-check-input-width;
   height: $form-check-input-width;
-  margin-top: ($line-height-base - $form-check-input-width) * 0.5; // line-height minus check height
+  margin-top: ($line-height-base - $form-check-input-width) * .5; // line-height minus check height
   vertical-align: top;
   background-color: $form-check-input-bg;
   background-repeat: no-repeat;
@@ -67,8 +65,7 @@
 
     &[type="checkbox"] {
       @if $enable-gradients {
-        background-image: escape-svg($form-check-input-checked-bg-image),
-          var(--#{$prefix}gradient);
+        background-image: escape-svg($form-check-input-checked-bg-image), var(--#{$prefix}gradient);
       } @else {
         background-image: escape-svg($form-check-input-checked-bg-image);
       }
@@ -76,8 +73,7 @@
 
     &[type="radio"] {
       @if $enable-gradients {
-        background-image: escape-svg($form-check-radio-checked-bg-image),
-          var(--#{$prefix}gradient);
+        background-image: escape-svg($form-check-radio-checked-bg-image), var(--#{$prefix}gradient);
       } @else {
         background-image: escape-svg($form-check-radio-checked-bg-image);
       }
@@ -89,8 +85,7 @@
     border-color: $form-check-input-indeterminate-border-color;
 
     @if $enable-gradients {
-      background-image: escape-svg($form-check-input-indeterminate-bg-image),
-        var(--#{$prefix}gradient);
+      background-image: escape-svg($form-check-input-indeterminate-bg-image), var(--#{$prefix}gradient);
     } @else {
       background-image: escape-svg($form-check-input-indeterminate-bg-image);
     }
@@ -141,8 +136,7 @@
       background-position: $form-switch-checked-bg-position;
 
       @if $enable-gradients {
-        background-image: escape-svg($form-switch-checked-bg-image),
-          var(--#{$prefix}gradient);
+        background-image: escape-svg($form-switch-checked-bg-image), var(--#{$prefix}gradient);
       } @else {
         background-image: escape-svg($form-switch-checked-bg-image);
       }
