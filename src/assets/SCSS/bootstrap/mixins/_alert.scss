@@ -1,3 +1,5 @@
+/** @format */
+
 // scss-docs-start alert-variant-mixin
 @mixin alert-variant($background, $border, $color) {
   --#{$prefix}alert-color: #{$color};

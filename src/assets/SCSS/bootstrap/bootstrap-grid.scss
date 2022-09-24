@@ -1,3 +1,5 @@
+/** @format */
+
 @import "mixins/banner";
 @include bsBanner(Grid);
 
@@ -57,7 +59,7 @@ $utilities: map-get-multiple(
     "padding-top",
     "padding-end",
     "padding-bottom",
-    "padding-start",
+    "padding-start"
   )
 );
 

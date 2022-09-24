@@ -1,3 +1,5 @@
+/** @format */
+
 // Responsive images (ensure images don't scale beyond their parents)
 //
 // This is purposefully opt-in via an explicit class rather than being the default for all `<img>`s.
@@ -8,7 +10,6 @@
 .img-fluid {
   @include img-fluid();
 }
-
 
 // Image thumbnails
 .img-thumbnail {
@@ -32,7 +33,7 @@
 }
 
 .figure-img {
-  margin-bottom: $spacer * .5;
+  margin-bottom: $spacer * 0.5;
   line-height: 1;
 }
 

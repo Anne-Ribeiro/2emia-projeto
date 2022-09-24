@@ -15,10 +15,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const database_1 = require("../.config/database");
 const argon2_1 = __importDefault(require("argon2"));
-const aes_1 = __importDefault(require("crypto-js/aes"));
 const users_1 = require("../.models/users");
-const dotenv_1 = __importDefault(require("dotenv"));
-dotenv_1.default.config();
 function default_1(app) {
     (0, database_1.conexao)();
     app.get("/registro", function (req, res) {
@@ -43,17 +40,13 @@ function default_1(app) {
             if (exists != null) {
                 return res.send(`O email ${dados.email} já foi cadastrado`);
             }
+            /* Verifica se a senha e a confirmação batem */
             if (dados.password !== dados.confirm) {
                 return res.send(`A senha e sua confirmação não batem`);
             }
             /* Encripitando data crítica */
             try {
-                let key = process.env.SECRET;
-                if (key === undefined) {
-                    throw console.error(`No bytes found`);
-                }
                 dados.password = yield argon2_1.default.hash(dados.password);
-                dados.email = yield aes_1.default.encrypt(dados.email, key).toString();
             }
             catch (err) {
                 console.error(err);

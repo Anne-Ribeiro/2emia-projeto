@@ -9,7 +9,7 @@ interface dados {
   nome: string;
   email: string;
   password: string;
-  confirm: string
+  confirm: string;
 }
 
 export default function (app: Express) {
@@ -28,7 +28,7 @@ export default function (app: Express) {
     dados.nome = dados.nome.trim();
     dados.email = dados.email.trim();
     dados.password = dados.password.trim();
-    dados.confirm = dados.confirm.trim()
+    dados.confirm = dados.confirm.trim();
 
     /* Verifica se ele já está cadastrado */
     let exists = await users.findOne({
@@ -41,15 +41,15 @@ export default function (app: Express) {
 
     /* Verifica se a senha e a confirmação batem */
     if (dados.password !== dados.confirm) {
-        return res.send(`A senha e sua confirmação não batem`)
+      return res.send(`A senha e sua confirmação não batem`);
     }
 
     /* Encripitando data crítica */
     try {
-        dados.password = await argon2.hash(dados.password)
+      dados.password = await argon2.hash(dados.password);
     } catch (err) {
-        console.error(err)
-        return res.send(`Algum erro aconteceu`)
+      console.error(err);
+      return res.send(`Algum erro aconteceu`);
     }
 
     /* Efetivamente registra o usuário */
