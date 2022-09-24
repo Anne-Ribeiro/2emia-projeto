@@ -12,6 +12,7 @@ const compression_1 = __importDefault(require("compression")); /* Lib pra melhor
 const test_1 = __importDefault(require("../routes/test"));
 const showcase_1 = __importDefault(require("../routes/showcase"));
 const registro_1 = __importDefault(require("../routes/registro"));
+const login_1 = __importDefault(require("../routes/login"));
 const app = (0, express_1.default)(); /* Instanciando o express */
 exports.app = app;
 const port = process.env.PORT || 7777; /* Definindo a porta de execução */
@@ -27,4 +28,5 @@ let routes = [
     (0, test_1.default)(app),
     (0, showcase_1.default)(app),
     (0, registro_1.default)(app),
+    (0, login_1.default)(app),
 ]; /* Executando todas a rotas e passando o express para cada uma */

@@ -8,6 +8,7 @@ import compression from "compression"; /* Lib pra melhorar a performace com o gz
 import index from "../routes/test";
 import showcase from "../routes/showcase";
 import registro from "../routes/registro";
+import login from "../routes/login";
 
 const app = express(); /* Instanciando o express */
 const port = process.env.PORT || 7777; /* Definindo a porta de execução */
@@ -31,6 +32,7 @@ let routes = [
   index(app),
   showcase(app),
   registro(app),
+  login(app),
 ]; /* Executando todas a rotas e passando o express para cada uma */
 
 export { app, port }; /* Exportando variáveis */

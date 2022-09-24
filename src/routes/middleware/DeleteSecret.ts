@@ -22,8 +22,8 @@ interface user {
 
 function DelUser(user: user) {
   try {
-    delete user._id, delete user.JWT;
-    delete user.Password;
+    delete user._id, delete user.JWT,
+    delete user.Password
     delete user.Privilege;
 
     return user;
