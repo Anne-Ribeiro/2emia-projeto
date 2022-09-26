@@ -8,8 +8,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.DelUser = void 0;
 function DelUser(user) {
     try {
-        delete user._id, delete user.JWT;
-        delete user.Password;
+        delete user._id, delete user.JWT, delete user.Password;
         delete user.Privilege;
         return user;
     }

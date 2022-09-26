@@ -9,10 +9,10 @@ const model = new mongoose.Schema({
   Password: String,
   Confirm: String,
   Privilege: { type: String, default: 0 },
-  trys: [
+  Trys: [
     {
-      ip: String,
-      times: Number,
+      Ip: String,
+      Date: { type: Date, default: Date.now() },
     },
   ],
   Data_cadastro: { type: Date, default: Date.now() },

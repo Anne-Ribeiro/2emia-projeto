@@ -30,6 +30,7 @@ function default_1(app) {
     app.post("/login", function (req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             let dados = req.body;
+            let reqIp = req.ip;
             dados.email = dados.email.trim();
             dados.password = dados.password.trim();
             let exists = yield users_1.users.findOne({
@@ -41,13 +42,27 @@ function default_1(app) {
             else if (exists.Password == null) {
                 return res.send(`Um erro inesperado aconteceu`);
             }
+            let times = yield users_1.users.findOne({
+                Email: exists.Email,
+            }, [
+                {
+                    $match: {
+                        $and: [
+                            { Date: { $gt: Date.now() - 1000, $lt: Date.now() } },
+                            { Ip: reqIp },
+                        ],
+                    },
+                },
+                { $group: { _id: null, times: { $sum: 1 } } },
+            ]);
+            console.log(`${times}`);
             let result;
             try {
                 result = yield argon2_1.default.verify(exists.Password, dados.password);
             }
             catch (err) {
                 console.error(err);
-                return res.send(`As senhas não batem`);
+                return res.send(`Um erro inesperado aconeceu`);
             }
             let secret = yield (0, makeSecrete_1.default)(50);
             if (result == true && exists.Email != undefined) {
@@ -65,7 +80,14 @@ function default_1(app) {
                 });
             }
             else {
-                res.send(`Erro`);
+                yield users_1.users.findOneAndUpdate({
+                    Email: exists.Email,
+                }, {
+                    $push: {
+                        Trys: { Ip: reqIp, Date: Date.now() },
+                    },
+                });
+                return res.send(`Email e/ou senha inválidos`);
             }
         });
     });

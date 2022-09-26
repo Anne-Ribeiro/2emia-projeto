@@ -8,7 +8,6 @@ import { createToken } from "./middleware/Tokens";
 import makeSecret from "./middleware/makeSecrete";
 import { DelUser } from "./middleware/DeleteSecret";
 
-
 interface dados {
   email: string;
   password: string;
@@ -26,6 +25,8 @@ export default function (app: Express) {
   app.post("/login", async function (req: Request, res: Response) {
     let dados: dados = req.body;
 
+    let reqIp = req.ip;
+
     dados.email = dados.email.trim();
     dados.password = dados.password.trim();
 
@@ -39,13 +40,32 @@ export default function (app: Express) {
       return res.send(`Um erro inesperado aconteceu`);
     }
 
+    let times = await users.findOne(
+      {
+        Email: exists.Email,
+      },
+      [
+        {
+          $match: {
+            $and: [
+              { Date: { $gt: Date.now() - 1000, $lt: Date.now() } },
+              { Ip: reqIp },
+            ],
+          },
+        },
+        { $group: { _id: null, times: { $sum: 1 } } },
+      ],
+    );
+
+    console.log(`${times}`);
+
     let result;
 
     try {
       result = await argon2.verify(exists.Password, dados.password);
     } catch (err) {
       console.error(err);
-      return res.send(`As senhas não batem`);
+      return res.send(`Um erro inesperado aconeceu`);
     }
 
     let secret: string | undefined = await makeSecret(50);
@@ -60,20 +80,25 @@ export default function (app: Express) {
       await users.findOneAndUpdate({ Email: exists.Email }, { JWT: secret });
 
       console.log(secret);
-      console.log(token)
-  
+      console.log(token);
+
       secret = undefined;
 
       res.send({
         dados,
       });
+    } else {
+      await users.findOneAndUpdate(
+        {
+          Email: exists.Email,
+        },
+        {
+          $push: {
+            Trys: { Ip: reqIp, Date: Date.now() },
+          },
+        },
+      );
+      return res.send(`Email e/ou senha inválidos`);
     }
-    else{
-        res.send(`Erro`)
-    }
-
-
-
-
   });
 }
