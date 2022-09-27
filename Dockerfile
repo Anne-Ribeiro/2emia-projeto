@@ -1,7 +1,8 @@
 ## Arquivo para docker não é necessário se não for utilizar-lo
 
-# docker kill $(docker ps -q) && docker build . -t habdig7oficial/reddito && docker run -p 7777:7777 -d habdig7oficial/reddito && docker ps --size
+# docker kill $(docker ps -q); docker build . -t habdig7oficial/reddito; docker run -p 7777:7777 -d habdig7oficial/reddito; docker ps --size
 
+# docker compose up 
 
 # Dependencias:
 FROM node:16

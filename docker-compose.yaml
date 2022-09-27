@@ -1,0 +1,11 @@
+
+services:
+  node:
+    build: .
+    command: "npm run start"
+    working_dir: "/home/reddito/app"
+    expose:
+      - "7777"
+    ports:
+      - "7777:7777"
+
