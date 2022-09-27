@@ -2,4 +2,14 @@ node_modules
 
 npm-debug.log
 
-**/*.ts
+# **/*.ts
+
+**/*.sh
+
+**/*.md
+
+#tsconfig.json
+
+.prettierignore
+
+.prettierrc.toml
