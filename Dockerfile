@@ -29,12 +29,10 @@ RUN cp ./node_modules/bootstrap/scss ./src/assets/SCSS/bootstrap -r
 RUN npm run sass
 
 # Remove arquivos desnecessários para produção
-RUN ls ./src/
+
 RUN find . -name "*.ts" -delete
 RUN find . -name "*.scss" -delete
 RUN rmdir ./src/* --ignore-fail-on-non-empty
-
-
 
 
 EXPOSE 7777

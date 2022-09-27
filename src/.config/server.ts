@@ -6,7 +6,6 @@ import compression from "compression"; /* Lib pra melhorar a performace com o gz
 
 /* Importando Rotas manuamente */
 import index from "../routes/test";
-import showcase from "../routes/showcase";
 import registro from "../routes/registro";
 import login from "../routes/login";
 
@@ -30,7 +29,6 @@ let statics = [
 
 let routes = [
   index(app),
-  showcase(app),
   registro(app),
   login(app),
 ]; /* Executando todas a rotas e passando o express para cada uma */

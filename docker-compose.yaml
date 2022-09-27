@@ -1,3 +1,4 @@
+# @format
 
 services:
   node:
@@ -8,4 +9,3 @@ services:
       - "7777"
     ports:
       - "7777:7777"
-
