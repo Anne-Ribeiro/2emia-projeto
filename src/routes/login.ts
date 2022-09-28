@@ -18,8 +18,6 @@ export default function (app: Express) {
   conexao();
 
   app.get("/login", async function (req: Request, res: Response) {
-    let cas = await users.find();
-    console.log(cas);
     res.render("login.ejs");
   });
 
@@ -27,7 +25,6 @@ export default function (app: Express) {
     let dados: dados = req.body;
 
     let reqIp = req.ip;
-    let default_time = new Date(Date.now()).toISOString;
 
     dados.email = dados.email.trim();
     dados.password = dados.password.trim();
@@ -86,7 +83,7 @@ export default function (app: Express) {
       secret = undefined;
 
       res.send({
-        dados,
+        exists
       });
     } else {
       await deferr(exists);
@@ -94,16 +91,18 @@ export default function (app: Express) {
     }
 
     async function deferr(exists: any) {
-      await users.findOneAndUpdate(
+      let logg = await users.findOneAndUpdate(
         {
           Email: exists.Email,
         },
         {
-          $push: {
+            $push: {
             Trys: { Ip: reqIp, Date: Date.now() },
           },
         },
       );
+
+      console.log(logg)
     }
   });
 }

@@ -2,6 +2,8 @@
 
 import mongoose from "mongoose";
 
+let ttl = 60
+
 const model = new mongoose.Schema({
   Nome: String,
   Email: String,
@@ -10,10 +12,10 @@ const model = new mongoose.Schema({
   Privilege: { type: String, default: 0 },
   Trys: [
     {
-      Ip: String,
-      Date: { type: Date, default: Date.now() },
+      Ip: { type: String, expireAfterSeconds: ttl},
+      Date: { type: Date, default: Date.now(),  expireAfterSeconds: ttl },
     },
-  ],
+  ] ,
   Data_cadastro: { type: Date, default: Date.now() },
 });
 

@@ -2,7 +2,8 @@
 
 # docker kill $(docker ps -q); docker build . -t habdig7oficial/reddito; docker run -p 7777:7777 -d habdig7oficial/reddito; docker ps --size
 
-# docker compose up 
+# npm run format; docker kill $(docker ps -q); docker compose build --no-cache; docker compose up;
+
 
 # Dependencias:
 FROM node:16
