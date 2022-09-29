@@ -3,6 +3,7 @@
 /* Path */
 @use "./reset.scss";
 @use "./bootstrap/bootstrap.scss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); /*Chamando a fonte: font-family: 'Poppins', sans-serif;
 
 /* Custom Variables*/
 $back-font-color: rgba(136, 176, 113, 50%);
@@ -13,10 +14,237 @@ $btn-color: rgba(125, 173, 97, 100%);
 $white: rgba(255, 255, 255, 100%);
 $black: rgba(0, 0, 0, 100%);
 
-html {
+
+
+/** 
+* Folha de estilo customizada do site...
+* @author: Heloísa Real, Mateus Vieira
+*/
+
+/* Layout */
+.flexFooter {
+    display: flex;
+    flex-direction: column-reverse;
 }
 
-btn {
-  :hover {
+/** Banner **/
+main{
+    background: url(img/imagem-fundo.png);
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.destaque {
+    height: 50vh;
+}
+
+.conteudo{
+    background: url(img/fundo.png);
+    height: 50vh;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+li.nav-item{
+    padding-left: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#link1{
+    border: 2px solid;
+    border-color: #7DAD61;
+    color: #7DAD61;
+    font-family: 'Poppins', sans-serif;
+}
+
+#link1:hover{
+    transition: 0.4s;
+    opacity: 70%;
+    font-family: 'Poppins', sans-serif;
+}
+
+#link2{
+    background-color: #7DAD61;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+#link2:hover{
+    transition: 0.4s;
+    opacity: 70%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.descricao{
+    border: 20px solid #fff;
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/*Banner*/
+.descricaoreddito{
+    border: 20px solid #FFFFFF;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.titulo{
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    color: #466633;
+}
+
+.subtitulo{
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    opacity: 90%;
+    color: #6b9453;
+}
+
+.explicacao{
+    text-align: justify;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 10px;
+}
+
+#cadastrereceitas{
+    background-color: #7DAD61;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+}
+
+#cadastrereceitas:hover{
+    transform: 0.4s;
+    font-size: 20px;
+    opacity: 90%;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/** Fim Banner **/
+
+/** Background video
+.video-background-holder {
+    position: relative;
+    background-color: black;
+    height: calc(100vh - 72px);
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
   }
+  
+  .video-background-holder video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+  
+  .video-background-content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .video-background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+  }
+  
+   End Background video */
+  
+
+/* Smartphone Portrait */
+
+/* Rodapé */
+
+footer {
+    padding: 50px 0px;
+    background-color: #343538;
+    color: #fff;
+    text-align: center;
+}
+
+#social{
+    margin-bottom: 25px;
+
+}
+
+/* Smartphone Landscape */ 
+@media (min-width: 400px) {
+
+    /*Banner*/
+    main{
+        height: 100vh;
+    }
+
+    /* Rodapé */
+    .flexFooter{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #social{
+        margin: 0;
+    }
+
+    .nav-item{
+        margin-top: 15px;
+    }
+
+    .descricaoreddito{
+        margin: 10px;
+    }
+}
+
+/* Tablet Portrait */ 
+@media (min-width: 768px) {
+    /*
+    body {
+        background-color: #ff00c8;
+        color: #ffffff;
+    }
+    */
+}
+
+/* Tablet Landscape */ 
+@media (min-width: 992px) {
+    /*
+    body {
+        background-color: #fff; 
+        color: #000;               
+    }
+    */
+}
+
+/* Notebooks/PCs/SmartTV */ 
+@media (min-width: 1200px) {
+    /*
+    body {
+        background-color: #fff;      
+    }
+    */
 }

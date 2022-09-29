@@ -6,7 +6,6 @@ import { conexao } from "../.config/database";
 import { users } from "../.models/users";
 import { createToken } from "./middleware/Tokens";
 import makeSecret from "./middleware/makeSecrete";
-import { DelUser } from "./middleware/DeleteSecret";
 import { Date } from "mongoose";
 
 interface dados {
@@ -82,9 +81,7 @@ export default function (app: Express) {
 
       secret = undefined;
 
-      res.send({
-        exists
-      });
+      res.redirect("/create");
     } else {
       await deferr(exists);
       return res.send(`Email e/ou senha inválidos`);
@@ -96,13 +93,16 @@ export default function (app: Express) {
           Email: exists.Email,
         },
         {
-            $push: {
-            Trys: { Ip: reqIp, Date: Date.now() },
+          $addToSet: {
+            Trys: {
+              Ip: reqIp,
+              $set: { Date: Date.now() },
+            },
           },
         },
       );
 
-      console.log(logg)
+      console.log(logg);
     }
   });
 }
