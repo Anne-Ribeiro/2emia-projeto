@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/*Chamando a fonte: font-family: 'Poppins', sans-serif;
+
+/** 
+* Folha de estilo customizada do site...
+* @author: Thiago
+*/
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+/* Layout */
+.flexFooter {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+/** Banner **/
+main{
+    background: url(/img/imagem-fundo.png);
+    height: 50px;
+    background-size: cover;
+    background-position: center;
+
+}
+
+#item1, #item2, #item3, #item4{
+    color: #6B8A53;
+    opacity: 70%;
+}
+
+#item1:hover, #item2:hover, #item3:hover, #item4:hover{
+    transform: 1s;
+    font-family: 'Poppins', sans-serif;
+    opacity: 100%;
+}
+
+.destaque {
+    height: 50vh;
+}
+
+.conteudo{
+    background: url(/img/fundo.png);
+    height: 50vh;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+li.nav-item{
+    padding-left: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#link1{
+    border: 2px solid;
+    border-color: #7DAD61;
+    color: #7DAD61;
+    font-family: 'Poppins', sans-serif;
+}
+
+#link1:hover{
+    transition: 0.4s;
+    opacity: 70%;
+    font-family: 'Poppins', sans-serif;
+}
+
+#link2{
+    background-color: #7DAD61;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+#link2:hover{
+    transition: 0.4s;
+    opacity: 70%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.descricao{
+    border: 20px solid #fff;
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/*Banner*/
+.descricaoreddito{
+    border: 20px solid #ffffff;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 15px;
+    
+}
+
+.titulo{
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    color: #466633;
+}
+
+.subtitulo{
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    opacity: 90%;
+    color: #6b9453;
+}
+
+.explicacao{
+    text-align: justify;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 10px;
+}
+
+#cadastrereceitas{
+    background-color: #7DAD61;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+}
+
+#cadastrereceitas:hover{
+    transform: 0.4s;
+    font-size: 20px;
+    opacity: 90%;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*Cards*/
+.card-title{
+    font-weight: bold;
+}
+
+.listinha{
+    margin-bottom: 15px;
+}
+
+.configlista{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#maispopulares{
+    font-family: 'Poppins';
+}
+
+#populares{
+    font-family: 'Poppins' sans-serif;
+    font-weight: bold;
+    text-align: center;
+    padding: 50px;
+    font-size: 30px;
+}
+
+.fixedcard{
+    padding: 15px;
+}
+
+.card-group{
+    padding: 100px;
+    padding-top: 0;
+}
+
+#saibamais{
+    font-family: 'Poppins' sans-serif;
+}
+
+/*Receita do dia*/
+#dia{
+    font-family: 'Poppins' sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+}
+
+/*Footer*/
+footer {
+    padding: 50px 0px;
+    background-color: #6B8A53;
+    color: #fff;
+    text-align: center;
+}
+
+.textofooter{
+    padding: 15px;
+}
+
+.pmaiordofooter, .pmenordofooter{
+    text-align: justify;
+    font-family: 'Poppins', sans-serif;
+}
+
+.pmaiordofooter{
+    font-size: 14px;
+}
+
+.pmenordofooter{
+    font-size: 12px;
+    opacity: 90%;
+    letter-spacing: 1.0px;
+}
+
+#social{
+    margin-bottom: 25px;
+}
+
+.instagram, .facebook, .youtube{
+    margin-bottom: 5px;
+}
+
+/* Smartphone Landscape */ 
+@media (min-width: 400px) {
+
+    /*Banner*/
+    main{
+        height: 100vh;
+    }
+
+    /* Rodapé */
+    .flexFooter{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #social{
+        margin: 0;
+    }
+
+    .nav-item{
+        margin-top: 15px;
+    }
+
+    .descricaoreddito{
+        margin: 10px;
+    }
+}
+
+/* Tablet Portrait */ 
+@media (min-width: 768px) {
+    /*
+    body {
+        background-color: #ff00c8;
+        color: #ffffff;
+    }
+    */
+}
+
+/* Tablet Landscape */ 
+@media (min-width: 992px) {
+    /*
+    body {
+        background-color: #fff; 
+        color: #000;               
+    }
+    */
+}
+
+/* Notebooks/PCs/SmartTV */ 
+@media (min-width: 1200px) {
+    /*
+    body {
+        background-color: #fff;      
+    }
+    */
+}
