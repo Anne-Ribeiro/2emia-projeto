@@ -1,250 +1,277 @@
 /** @format */
 
-/* Path */
-@use "./reset.scss";
-@use "./bootstrap/bootstrap.scss";
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); /*Chamando a fonte: font-family: 'Poppins', sans-serif;
-
-/* Custom Variables*/
-$back-font-color: rgba(136, 176, 113, 50%);
-$footer-color: rgba(62, 81, 51, 100%);
-$adress-color: rgba(107, 138, 83, 100%);
-$btn-color: rgba(125, 173, 97, 100%);
-
-$white: rgba(255, 255, 255, 100%);
-$black: rgba(0, 0, 0, 100%);
-
-
+@use "./reset.scss"; /* Resetando as configurações por segurança */
+@use "./bootstrap/bootstrap.scss"; /* Importando bootstrap*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap"); /*Chamando a fonte: font-family: 'Poppins', sans-serif;
 
 /** 
 * Folha de estilo customizada do site...
-* @author: Heloísa Real, Mateus Vieira
+* @author: Heloísa Real, Anne dos Santos Ribeiro, Carolina Barbosa Pacífico de Almeida,  Julie Missae Sanday, Maria Clara Gomes Gonçalves, Mateus Felipe da Silveira Vieira 
 */
 
+/* Criando variaveis costumizadas*/
+
+$primary-green: #6b8a53;
+$detail-color: #7dad61;
+$contrast-color: #466633;
+$variant-color: #6b9453;
+
+$white: #fff;
+$black: #000;
+
+$default-font: "Poppins";
+
+::selection {
+  color: $white;
+  background-color: $contrast-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+p,
+ul {
+  font-family: $default-font, cursive;
+}
 /* Layout */
 .flexFooter {
-    display: flex;
-    flex-direction: column-reverse;
+  @extend .d-flex;
+  @extend .flex-row;
 }
 
 /** Banner **/
-main{
-    background: url(img/imagem-fundo.png);
-    height: 50vh;
-    background-size: cover;
-    background-position: center;
+main {
+  background: url("../Images/imagem-fundo.png");
+  height: 50px;
+  background-size: cover;
+  background-position: center;
 }
 
-.destaque {
-    height: 50vh;
+.item {
+  color: $primary-green;
+  opacity: 70%;
 }
 
-.conteudo{
-    background: url(img/fundo.png);
-    height: 50vh;
-    background-size: cover;
-    background-attachment: fixed;
+.item:hover {
+  transform: 1s;
+  font-family: $default-font, sans-serif;
+  opacity: 100%;
 }
 
-li.nav-item{
-    padding-left: 20px;
-    font-family: 'Poppins', sans-serif;
+.conteudo {
+  background: url("../Images/fundo.png");
+  height: 50vh;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-#link1{
-    border: 2px solid;
-    border-color: #7DAD61;
-    color: #7DAD61;
-    font-family: 'Poppins', sans-serif;
+li.nav-item {
+  padding-left: 20px;
+  font-family: $default-font, sans-serif;
 }
 
-#link1:hover{
-    transition: 0.4s;
-    opacity: 70%;
-    font-family: 'Poppins', sans-serif;
+.link1 {
+  border: 2px solid !important;
+  border-color: $detail-color !important;
+  color: $detail-color !important;
+  font-family: $default-font, sans-serif;
 }
 
-#link2{
-    background-color: #7DAD61;
-    color: #fff;
-    font-family: 'Poppins', sans-serif;
+.link1:hover {
+  transition: 0.4s !important;
+  opacity: 70% !important;
+  font-family: $default-font, sans-serif !important;
 }
 
-#link2:hover{
-    transition: 0.4s;
-    opacity: 70%;
-    font-family: 'Poppins', sans-serif;
+.link2 {
+  background-color: $detail-color !important;
+  color: $white !important;
+  font-family: $default-font, sans-serif !important;
 }
 
-.descricao{
-    border: 20px solid #fff;
-    background-color: #fff;
-    font-family: 'Poppins', sans-serif;
-    font-size: 30px;
-    font-weight: bold;
+.link2:hover {
+  background-color: $detail-color !important;
+  transition: 0.4s !important;
+  opacity: 70% !important;
+  font-family: $default-font, sans-serif !important;
+}
+
+.descricao {
+  border: 20px solid $white;
+  background-color: $white;
+  font-family: $default-font, sans-serif;
+  font-size: 1.875rem;
+  font-weight: bold;
 }
 
 /*Banner*/
-.descricaoreddito{
-    border: 20px solid #FFFFFF;
-    background-color: #FFFFFF;
-    border-radius: 10px;
-    padding: 10px;
+.descricaoreddito {
+  border: 20px solid $white;
+  background-color: $white;
+  border-radius: 10px;
+  padding: 15px;
 }
 
-.titulo{
-    text-align: center;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-family: 'Poppins', sans-serif;
-    color: #466633;
+.titulo {
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: $default-font, sans-serif;
+  color: $contrast-color;
 }
 
-.subtitulo{
-    text-align: center;
-    font-size: 18px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    opacity: 90%;
-    color: #6b9453;
+.subtitulo {
+  text-align: center;
+  font-size: 1.125rem;
+  font-family: $default-font, sans-serif;
+  font-weight: 600;
+  opacity: 90%;
+  color: $variant-color;
 }
 
-.explicacao{
-    text-align: justify;
-    font-family: 'Poppins', sans-serif;
-    margin-top: 10px;
+.explicacao {
+  text-align: justify;
+  font-family: $default-font, sans-serif;
+  margin-top: 10px;
+}
+.logo {
+  width: 85px;
 }
 
-#cadastrereceitas{
-    background-color: #7DAD61;
-    color: #fff;
-    font-family: 'Poppins', sans-serif;
-    border: none;
+#cadastrereceitas {
+  background-color: $detail-color;
+  color: $white;
+  font-family: $default-font, sans-serif;
+  border: none;
 }
 
-#cadastrereceitas:hover{
-    transform: 0.4s;
-    font-size: 20px;
-    opacity: 90%;
-    font-family: 'Poppins', sans-serif;
+#cadastrereceitas:hover {
+  transform: 0.4s;
+  font-size: 1.25rem;
+  opacity: 90%;
+  font-family: $default-font, sans-serif;
 }
 
+/*Cards*/
+.card-title {
+  font-weight: bold;
+}
 
-/** Fim Banner **/
+.listinha {
+  margin-bottom: 15px;
+}
 
-/** Background video
-.video-background-holder {
-    position: relative;
-    background-color: black;
-    height: calc(100vh - 72px);
-    min-height: 25rem;
-    width: 100%;
-    overflow: hidden;
-  }
-  
-  .video-background-holder video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: 0;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-  }
-  
-  .video-background-content {
-    position: relative;
-    z-index: 2;
-  }
-  
-  .video-background-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    opacity: 0.5;
-    z-index: 1;
-  }
-  
-   End Background video */
-  
+.configlista {
+  font-size: 12px;
+  font-weight: bold;
+}
 
-/* Smartphone Portrait */
+#maispopulares {
+  font-family: $default-font;
+}
 
-/* Rodapé */
+#populares {
+  font-family: $default-font sans-serif;
+  font-weight: bold;
+  text-align: center;
+  padding: 50px;
+  font-size: 30px;
+}
 
+.fixedcard {
+  padding: 15px;
+}
+
+.card-group {
+  padding: 100px;
+  padding-top: 0;
+}
+
+#saibamais {
+  font-family: $default-font sans-serif;
+}
+
+/*Receita do dia*/
+#dia {
+  font-family: $default-font sans-serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 30px;
+  padding: 10px;
+}
+
+/*Footer*/
 footer {
-    padding: 50px 0px;
-    background-color: #343538;
-    color: #fff;
-    text-align: center;
+  padding: 50px 0px;
+  background-color: $primary-green;
+  color: $white;
+  text-align: center;
 }
 
-#social{
-    margin-bottom: 25px;
-
+.textofooter {
+  padding: 15px;
 }
 
-/* Smartphone Landscape */ 
+.pmaiordofooter,
+.pmenordofooter {
+  text-align: justify;
+  font-family: $default-font, sans-serif;
+}
+
+.pmaiordofooter {
+  font-size: 14px;
+}
+
+.pmenordofooter {
+  font-size: 12px;
+  opacity: 90%;
+  letter-spacing: 1px;
+}
+
+#social {
+  margin-bottom: 25px;
+}
+
+.instagram,
+.facebook,
+.youtube {
+  margin-bottom: 5px;
+}
+
+/* Smartphone Landscape */
 @media (min-width: 400px) {
+  /*Banner*/
+  main {
+    height: 100vh;
+  }
 
-    /*Banner*/
-    main{
-        height: 100vh;
-    }
+  .collap-ajuste {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+  }
 
-    /* Rodapé */
-    .flexFooter{
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
+  /* Rodapé */
+  .flexFooter {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 
-    #social{
-        margin: 0;
-    }
+  #social {
+    margin: 0;
+  }
 
-    .nav-item{
-        margin-top: 15px;
-    }
+  .nav-item {
+    margin-top: 15px;
+  }
 
-    .descricaoreddito{
-        margin: 10px;
-    }
-}
-
-/* Tablet Portrait */ 
-@media (min-width: 768px) {
-    /*
-    body {
-        background-color: #ff00c8;
-        color: #ffffff;
-    }
-    */
-}
-
-/* Tablet Landscape */ 
-@media (min-width: 992px) {
-    /*
-    body {
-        background-color: #fff; 
-        color: #000;               
-    }
-    */
-}
-
-/* Notebooks/PCs/SmartTV */ 
-@media (min-width: 1200px) {
-    /*
-    body {
-        background-color: #fff;      
-    }
-    */
+  .descricaoreddito {
+    margin: 10px;
+  }
 }

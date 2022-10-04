@@ -4,47 +4,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Título da Homepage</title>
-  <meta name="description" content="Home Page do Reditto">
-  <!-- CSS Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-  <!-- CSS Customizado -->
-  <link rel="stylesheet" href="style.css">
+  <title>Reddito | Home Page</title>
+  <meta name="description" content="Descrever o site (máximo 150 caracteres)">
+
+  <!-- CSS Customizado + bootsrap -->
+  <link rel="stylesheet" href="/CSS/style.css">
+  
+  <!-- JS Part of Bootstrap-->
+  <script type="text/javascript" src="JS/bootstrap/bootstrap.js"></script>
+
   <!-- Favicon -->
-  <link rel="icon" href="img/logohomepage.png">
+  <link rel="icon" href="/Images/reddito.png">
 </head>
 
 <body>
   <!-- Menu -->
   <nav class="navbar navbar-expand-lg bg-light">
     <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="/img/logohomepage.png" alt="Descrição da Imagem" width="85px" height="85px">
+      <a class="navbar-brand" href="/">
+        <img class="logo" src="/Images/logohomepage.png" alt="Logo do Reddito" >
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <img src="img/home-icon.png" alt="" width="30px" height="30px">
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="camisetas.html">Opção1</a></li>
-              <li><a class="dropdown-item" href="bermudas.html">Opção2</a></li>
-              <li><a class="dropdown-item" href="tenis.html">Opção3</a></li>
-            </ul>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 collap-ajuste">
+          <li class="nav-item">
+            <a class="btn link1"  href="/errorpage.html" role="button">Entrar</a>
           </li>
           <li class="nav-item">
-            <a class="btn" id="link1" href="#" role="button">Link1</a>
-          </li>
-          <li class="nav-item">
-            <a class="btn" id="link2" href="#" role="button">Link2</a>
+            <a class="btn link2" href="/errorpage.html" role="button">Cadastre-se</a>
           </li>
         </ul>
+        <div class="opcoesmenu">
+          <ul class="nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link active item" aria-current="page" href="#recpopulares" id="item1">Receitas Populares</a>
+            </li>
+            <li class="nav-item item">
+              <a class="nav-link" href="#recdia" id="item2">Receita do Dia</a>
+            </li>
+            <li class="nav-item item">
+              <a class="nav-link" href="/errorpage.html" id="item3">Sobre nós</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </nav>
@@ -59,37 +64,144 @@
     <button type="button" class="btn btn-secondary btn-lg" id="cadastrereceitas">Cadastre suas receitas</button>
   </main>
 
-  <section class="container-fluid conteudo">
+  <!--Cards -->
+  <!--Entrada para o Backend, receitas mais populares-->
+  <section class="container flex-wrap" id="recpopulares">
+    <h3 id="populares"> Mais Populares</h3>
+    <div class="card-group">
+      <div class="card">
+        <img src="/Images/strogonoffdefrango.png" class="card-img-top" alt="Receita Boilerplate">
+        <div class="card-body">
+          <h5 class="card-title">Nome da Receita</h5>
+          <p class="card-text">Breve descrição do que é</p>
+          <!--Entrada para o Backend, alerta de produtos-->
+          <div class="listinha">
+            <div class="configlista">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item list-group-item-warning">⚠️ Contém TalProduto</li>
+                <li class="list-group-item list-group-item-warning">⚠️ Contém TalProduto</li>
+              </ul>
+            </div>
+          </div>
+          <a href="/errorpage.html" class="btn link2" role="button">Saiba Mais</a>
+        </div>
+      </div>
 
+      <div class="m-1"></div>
+      
+      <div class="card">
+        <img src="/Images/lasanha.png" class="card-img-top" alt="Receita Boilerplate">
+        <div class="card-body">
+          <h5 class="card-title">Nome da Receita</h5>
+          <p class="card-text">Breve descrição do que é</p>
+          <!--Entrada para o Backend, alerta de produtos que as pessoas podem  restrições-->
+          <div class="listinha">
+            <div class="configlista">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item list-group-item-warning">⚠️ Contém TalProduto</li>
+                <li class="list-group-item list-group-item-warning">⚠️ Contém TalProduto</li>
+              </ul>
+            </div>
+          </div>
+          <div class="botao"></div>
+          <a href="/errorpage.html" class="btn link2" role="button">Saiba Mais</a>
+        </div>
+      </div>
+
+      <div class="m-1"></div>
+
+      <div class="card">
+        <img src="/Images/escondidinho.png" class="card-img-top" alt="Receita Boilerplate">
+        <div class="card-body">
+          <h5 class="card-title">Nome da receita</h5>
+          <p class="card-text">Breve descrição do que é</p>
+          <!--Entrada para o Backend, alerta de produtos-->
+          <div class="listinha">
+            <div class="configlista">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item list-group-item-warning">⚠️ Contém TalProduto</li>
+                <li class="list-group-item list-group-item-warning">⚠️ Contém TalProduto</li>
+              </ul>
+            </div>
+          </div>
+          <a href="/errorpage.html" class="btn link2" role="button">Saiba Mais</a>
+        </div>
+      </div>
+    </div>
   </section>
+  
+  <!--Receita do dia-->
+  <section id="recdia">
+    <div>
+      <h3 id="dia">Receita do dia</h3>
+      <div class="d-flex justify-content-center mb-5">
+        <div class="fixedcard">
+        <div class="card mb-1" style="max-width: auto;">
+          <div class="row">
+            <div class="col-md-0">
+              <img  src="/Images/receita_do_dia.png" class="img-fluid rounded-start" alt="Receita Boilerplate">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Nome da Receita</h5>
+                
+                <p class="card-text">Breve descrição da receita</p>
+                <div class="listinha">
+                  <div class="configlista">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item list-group-item-warning">⚠️ Contém TalProduto</li>
+                      <li class="list-group-item list-group-item-warning">⚠️ Contém TalProduto</li>
+                    </ul>
+                  </div>
+                </div>
+                <!--Aqui temos uma entrada para o Backend, com atualização da receita/opcional-->
+                <p class="card-text"><small class="text-muted">Publicada a 30 minutos</small></p>
+                <a href="#" class="btn link2" role="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Ver Receita</a>
+          
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Faça seu cadastro ou Login</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <p>Para ter acesso a esse conteúdo, faça o seu cadastro, ou se já tem uma conta, faça seu login!</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-  <section class="container-fluid destaque">
-    
-  </section>
-
-  <section class="container-fluid conteudo">
-    
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
   </section>
 
   <!-- Rodapé -->
   <footer class="container-fluid">
-    <div class="container flexFooter">
-      <div>
-        <p>@Copyright</p>
+    <div class="container flexFooter flex-wrap">
+      <div class="img">
+        <img class="border border-white rounded logo" src="/Images/RedditoLogo1.png" alt="Reddito Logo">
+      </div>
+      <div class="textofooter">
+        <p class="pmaiordofooter text-center">Copyright &#169; 2022 Anne Ribeiro, Carolina Almeida, Heloísa Real, Julie Sanday, Maria Gonçalves, Mateus Vieira </p>
+        <p class="pmenordofooter text-center">Reddito, distribuido de forma Open Source e gratuita pela licença MIT, <strong>Site ficticio com finalidade acadêmica.</strong></p>
       </div>
       <div id="social">
-        <a href="https://www.instagram.com/nike/" target="_blank"><img src="img/instagram.png" alt="Instagram"></a>
-        <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
-        <a href="#"><img src="img/youtube.png" alt="YouTube"></a>
-        <a href="#"><img src="img/twitter.png" alt="Twitter"></a>
-        <a href="#"><img src="img/linkedin.png" alt="Linkedin"></a>
+        <a href="pag-continuidade.html" target="_blank"><img src="/Images/instagram.png" alt="Instagram" class="instagram"></a>
+        <a href="pag-continuidade.html"><img src="/Images/facebook.png" alt="Facebook" class="facebook"></a>
+        <a href="pag-continuidade.html"><img src="/Images/youtube.png" alt="YouTube" class="youtube"></a>
       </div>
     </div>
   </footer>
-  <!-- JavaScript Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
-  </script>
-</body>
 
+
+
+</body>
 </html>

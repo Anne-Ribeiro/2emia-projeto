@@ -23,7 +23,7 @@ RUN npm run transpile
 
 # copia o bootstrap
 RUN cp ./node_modules/bootstrap/scss ./src/assets/SCSS/bootstrap -r
-
+RUN cp ./node_modules/bootstrap/dist/js/ ./src/assets/JS/bootstrap/ -r
 # RUN ls /src/assets/SCSS/bootstrap
 
 # Trasnpila arquivos sass em css
