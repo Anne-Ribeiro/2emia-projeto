@@ -11,7 +11,7 @@
     "sass": "npx sass src/assets/SCSS/:src/assets/CSS",
     "ts-dev": "npm run format && npm run transpile && npm run sass && npm run start",
     "clean": "rm -rf build && rm -rf src/assets/CSS && rm -rf src/assets/SCSS/bootstrap",
-    "build": "npm run legacy-postinstall && ts-dev",
+    "build": "npm run legacy-postinstall && npm run ts-dev",
     "test": "jest "
   },
   "repository": {
