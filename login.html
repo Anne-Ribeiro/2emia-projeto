@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Título da homepage</title>
+  <meta name="description" content="Descrever o site (máximo 150 caracteres)">
+  <!-- CSS Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <!-- CSS Customizado -->
+  <link rel="stylesheet" href="/css/cadastro.css">
+  <!-- Favicon -->
+  <link rel="icon" href="./img/logo-da-pag.png">
+</head>
+
+<body>
+  <!-- Menu -->
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="/img/logohomepage.png" alt="Descrição da Imagem" width="85px" height="85px">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <!-- Sempre voltar para a página anterior /SE CONSEGUIR -->
+            <a class="btn" id="link2" href="/index.html" role="button">Voltar</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Formulário -->
+  <main class="container-fluid d-flex flex-column justify-content-top align-items-center">
+    <div class="descricaoreddito mt-5">
+      <h1 class="titulo">Login</h1>
+      <h2 class="subtitulo">Preencha com os seus dados já cadastrados para fazer o login.</h2>
+      <form>
+        <!-- Nome Completo -->
+        <div class="form-row">
+          <!-- Email -->
+          <div class="form-group col mt-2">
+            <label for="inputEmail4">Email:</label>
+            <input type="email" class="form-control" id="inputEmail4" required>
+          </div>
+          <!-- Senha -->
+          <div class="form-group col mt-2">
+            <label for="inputPassword4">Password:</label>
+            <input type="password" class="form-control" id="inputPassword4" required>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3" id="link2" style="border: none;">Submit</button>
+        <div class="semlogin">
+          <p>Ainda não possue login? <a href="/cadastro.html">Cadastre-se aqui!</a> </p>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="container-fluid">
+    <div class="container flexFooter">
+      <div class="img">
+        <img src="./img/Reditto - LOGOS  (3) 2footer-logo.png" width="100px" alt="">
+      </div>
+      <div class="textofooter">
+        <p class="pmaiordofooter">@Copyright - Criado em 27/09/2022</p>
+        <p class="pmenordofooter">Reddito, todos os direitos reservados. Proibida a reprodução sem autorização. <strong>Site ficticio com finalidade acadêmica.</strong></p>
+      </div>
+      <div id="social">
+        <a href="pag-continuidade.html" target="_blank"><img src="img/instagram.png" alt="Instagram" class="instagram"></a>
+        <a href="pag-continuidade.html"><img src="img/facebook.png" alt="Facebook" class="facebook"></a>
+        <a href="pag-continuidade.html"><img src="img/youtube.png" alt="YouTube" class="youtube"></a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
+  </script>
+</body>
+</html>
