@@ -21,6 +21,8 @@ $black: #000;
 
 $default-font: "Poppins";
 
+$img-banner-w: 30vh;
+
 ::selection {
   color: $white;
   background-color: $contrast-color;
@@ -72,6 +74,18 @@ main {
 li.nav-item {
   padding-left: 20px;
   font-family: $default-font, sans-serif;
+}
+
+li.nav-item .nav-link {
+  color: $primary-green;
+}
+
+li.nav-item .nav-link:hover {
+  color: $detail-color !important;
+}
+
+li.nav-item #item1 {
+  color: $contrast-color !important;
 }
 
 .link1 {
@@ -140,6 +154,10 @@ li.nav-item {
 }
 .logo {
   width: 85px;
+}
+
+.div-max {
+  max-width: $img-banner-w;
 }
 
 #cadastrereceitas {
