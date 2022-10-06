@@ -6,7 +6,6 @@ import { conexao } from "../.config/database";
 import { users } from "../.models/users";
 import { createToken } from "./middleware/Tokens";
 import makeSecret from "./middleware/makeSecrete";
-import { Date } from "mongoose";
 
 interface dados {
   email: string;
@@ -81,9 +80,30 @@ export default function (app: Express) {
 
       secret = undefined;
 
+      let secure;
+
+      if (process.env.Node_env != "dev") {
+        secure = true;
+      } else {
+        secure = false;
+      }
+
+      res.cookie("jwt", token, {
+        httpOnly: true,
+        secure: secure,
+        sameSite: "strict",
+      });
+
+      res.cookie("email", exists.Email, {
+        httpOnly: true,
+        secure: secure,
+        sameSite: "strict",
+      });
+
       res.redirect("/create");
     } else {
       await deferr(exists);
+
       return res.send(`Email e/ou senha inválidos`);
     }
 
