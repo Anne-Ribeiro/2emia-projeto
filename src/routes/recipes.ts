@@ -7,33 +7,70 @@ import { users } from "../.models/users";
 import { recipes } from "../.models/recipes";
 
 import { verifyToken } from "./middleware/Tokens";
+import DelSecret from "./middleware/DeleteSecret";
 
 export default function (app: Express) {
   conexao();
 
-  app.get("/create", function (req: Request, res: Response) {
+  app.get("/create", async function (req: Request, res: Response) {
+    let jwt = req.cookies.jwt;
+
+    let email = req.cookies.email;
+
+    let consulta = await users.findOne({
+      Email: email,
+    });
+
+    if (consulta === null) {
+      DelSecret(res);
+      return res.send(`Não foi possivel encontrar o email ${email}`);
+    }
+
+    let result;
+
+    try {
+      result = verifyToken({
+        analise_token: jwt,
+        secret: consulta.JWT,
+      });
+    } catch (err) {
+      console.error(err);
+      return res.send(`Erro genérico`);
+    }
+
+    if (result.verified == false) {
+      DelSecret(res);
+      return res.send(`Não foi possivel assinar sua autenticação`);
+    }
+
+    console.log(req.cookies);
     res.render("create.ejs");
   });
 
   app.post("/create", async function (req: Request, res: Response) {
     let dados = req.body;
 
+    let jwt = req.cookies.jwt;
+    let email = req.cookies.email;
+
     let consulta = await users.findOne({
-      Email: dados.email,
+      Email: email,
     });
 
     if (consulta === null) {
-      return res.send(`Não foi posível se conectar ao DB`);
+      DelSecret(res);
+      return res.send(`Não foi possivel encontrar o email ${email}`);
     }
 
     try {
       let result = verifyToken({
-        analise_token: dados.jwt,
+        analise_token: jwt,
         secret: consulta.JWT,
       });
     } catch (err) {
       console.error(err);
-      res.send(`Erro genérico`);
+      DelSecret(res);
+      return res.send(`Não foi possível assinar o jwt`);
     }
 
     let lenthP = 200;

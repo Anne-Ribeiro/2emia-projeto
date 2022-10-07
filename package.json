@@ -10,7 +10,7 @@
     "transpile": "npx tsc",
     "sass": "npx sass src/assets/SCSS/:src/assets/CSS",
     "ts-dev": "npm run format && npm run transpile && npm run sass && npm run start",
-    "clean": "rm -rf build && rm -rf src/assets/CSS && rm -rf src/assets/SCSS/bootstrap",
+    "clean": "rm -rf build && rm -rf src/assets/CSS && rm -rf src/assets/SCSS/bootstrap && rm -rf src/assets/JS/bootstrap",
     "build": "npm run legacy-postinstall && npm run ts-dev",
     "test": "jest "
   },
@@ -29,6 +29,7 @@
   "homepage": "https://github.com/Anne-Ribeiro/2emia-projeto#readme",
   "devDependencies": {
     "@types/compression": "^1.7.2",
+    "@types/cookie-parser": "^1.4.3",
     "@types/ejs": "^3.1.1",
     "@types/express": "^4.17.14",
     "@types/fs-extra": "^9.0.13",
@@ -42,6 +43,7 @@
     "argon2": "^0.29.1",
     "bootstrap": "^5.2.1",
     "compression": "^1.7.4",
+    "cookie-parser": "^1.4.6",
     "ejs": "^3.1.8",
     "express": "^4.18.1",
     "helmet": "^6.0.0",

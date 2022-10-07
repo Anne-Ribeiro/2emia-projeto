@@ -4,7 +4,7 @@
  * @format
  */
 
-interface user {
+/*interface user {
   _id?: String;
   Nome: String;
   Email: String;
@@ -31,4 +31,16 @@ function DelUser(user: user) {
   }
 }
 
-export { DelUser };
+export { DelUser }; */
+
+import { Response } from "express";
+
+export default function (res: Response): void | string {
+  try {
+    res.clearCookie("jwt");
+    res.clearCookie("email");
+    return;
+  } catch (err) {
+    console.log(`❌ - Não foi possivel limpar os campos de usuários\n\n${err}`);
+  }
+}
