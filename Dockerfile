@@ -18,6 +18,8 @@ COPY . .
 # Instala dependencias
 RUN npm install
 
+RUN npx tsc --version
+
 # Transpila o Typescript
 RUN npm run transpile
 

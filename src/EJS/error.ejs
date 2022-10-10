@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERRO - 404</title>
+  <!-- CSS Customizado + bootsrap -->
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/error.css">
+  
+  <!-- JS Part of Bootstrap-->
+    <script type="text/javascript" src="JS/bootstrap/bootstrap.js"></script>
+
+  <!-- Favicon -->
+    <link rel="icon" href="/Images/reddito.png">
+
+</head>
+<body style="background-color: #F5F5F5;">
+
+    <%- include ("./components/nav.ejs") %> 
+
+    <li class="nav-item">
+        <a class="btn" id="link1" href="/" role="button">Voltar para a Página Inicial</a>
+    </li>
+    <div class="escrita">
+        <h1 class="titulo"><strong>ERROR</strong></h1>
+        <h2 class="subtitulo">Page not found :(</h2>
+    </div>
+    <div class="imagemm d-flex justify-content-center">
+        <img src="/Images/Desing - página de erro.svg" alt="Imagem vetoriazada de erro">
+    </div>
+
+    <%- include ("./components/footer.ejs") %> 
+</body>
+</html>

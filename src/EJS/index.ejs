@@ -18,41 +18,8 @@
 </head>
 
 <body>
-  <!-- Menu -->
-  <nav class="nav navbar navbar-expand-lg bg-light">
-    <div class="container">
-      <a class="navbar-brand" href="/">
-        <img class="logo" src="/Images/logohomepage.png" alt="Logo do Reddito" >
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav nav-pills me-auto mb-2 mb-lg-0 collap-ajuste">
-          <li class="nav-item">
-            <a class="btn link1"  href="/errorpage.html" role="button">Entrar</a>
-          </li>
-          <li class="nav-item">
-            <a class="btn link2" href="/errorpage.html" role="button">Cadastre-se</a>
-          </li>
-        </ul>
-        <div class="opcoesmenu">
-          <ul class="nav justify-content-center">
-            <li class="nav-item">
-              <a class="nav-link active item" aria-current="page" href="#recpopulares" id="item1">Receitas Populares</a>
-            </li>
-            <li class="nav-item item">
-              <a class="nav-link" href="#recdia" id="item2">Receita do Dia</a>
-            </li>
-            <li class="nav-item item">
-              <a class="nav-link" href="/errorpage.html" id="item3">Sobre nós</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </nav>
+
+  <%- include ("./components/nav.ejs") %> 
 
   <noscript>
     ops seu navegador não suporta JS
@@ -189,23 +156,8 @@
     </div>
   </section>
 
-  <!-- Rodapé -->
-  <footer class="container-fluid">
-    <div class="container flexFooter flex-wrap">
-      <div class="img">
-        <img class="border border-white rounded logo" src="/Images/RedditoLogo1.png" alt="Reddito Logo">
-      </div>
-      <div class="textofooter">
-        <p class="pmaiordofooter text-center">Copyright &#169; 2022 Anne Ribeiro, Carolina Almeida, Heloísa Real, Julie Sanday, Maria Gonçalves, Mateus Vieira </p>
-        <p class="pmenordofooter text-center">Reddito, distribuido de forma Open Source e gratuita pela licença MIT, <strong>Site ficticio com finalidade acadêmica.</strong></p>
-      </div>
-      <div id="social">
-        <a href="pag-continuidade.html" target="_blank"><img src="/Images/instagram.png" alt="Instagram" class="instagram"></a>
-        <a href="pag-continuidade.html"><img src="/Images/facebook.png" alt="Facebook" class="facebook"></a>
-        <a href="pag-continuidade.html"><img src="/Images/youtube.png" alt="YouTube" class="youtube"></a>
-      </div>
-    </div>
-  </footer>
+
+  <%- include ("./components/footer.ejs") %>
 
 
 
