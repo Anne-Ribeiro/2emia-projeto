@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Create</h1>
+
+    <form action="/create" method="post">
+        <input type="text" name="titulo" id="">
+        <input type="text" name="descricao" id="">
+        <input type="number" name="porcoes" id="">
+        <input type="text" name="ingredientes" id="">
+        <textarea name="preparo" id="" cols="30" rows="10"></textarea>
+    
+        <input type="submit" value="log">
+    </form>
+
+    <h1>Read</h1>
+
+
+    <%for (let i = 0; i < retorno.length; i++) {%>
+        <p>Array Position: <%=i%></p>
+
+        <p>Titulo: <%=retorno[i].Titulo%></p>
+        <p>Descrição: <%=retorno[i].Descricao%></p>
+        <p>Ingredientes: <%=retorno[i].Ingredientes%></p>
+        <p>Porções: <%=retorno[i].Porcoes%></p>
+        <p>Preparo: <%=retorno[i].Preparo%></p>
+        <p>Alterado: <%=retorno[i].Alterado%></p>
+        <p>Data de Cadastro<%=retorno[i].Data_de_cadastro%></p>
+        <hr>
+        
+    <%}%>
+
+
+    <h1>Update && Delete</h1>
+
+    <%for (let i = 0; i < retorno.length; i++) {%>
+
+
+        <form action="/update" method="post">
+
+            <%=i%>
+
+            <h3><%=retorno[i]._id%></h3>
+            <input type="hidden" name="_id" value="<%=retorno[i]._id%>">
+            <input type="text" name="titulo" id="" value="<%=retorno[i].Titulo%>">
+            <input type="text" name="descricao" id="" value="<%=retorno[i].Descricao%>">
+            <input type="text" name="ingredientes" id="" value="<%=retorno[i].Ingredientes%>">
+            <input type="number" name="porcoes" id="" value="<%=retorno[i].Porcoes%>">
+            <textarea name="preparo" id="" cols="30" rows="10" ><%=retorno[i].Preparo%></textarea>
+        
+            <input type="submit" value="Update <%=i%>">
+            
+            <%=retorno[i].Alterado%>
+            <%=retorno[i].Data_de_cadastro%>
+
+
+        </form>
+
+
+        <form action="/delete" method="post">
+
+            <input type="hidden" name="_id" value="<%=retorno[i]._id%>">
+        
+            <input type="submit" value="Delete <%=i%>">
+
+        </form>
+
+        <hr>
+        
+    <%}%>
+
+
+
+
+</body>
+</html>
