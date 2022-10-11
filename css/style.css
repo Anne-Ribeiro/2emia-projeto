@@ -1,6 +1,6 @@
 /** @format */
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 /*Chamando a fonte: font-family: 'Poppins', sans-serif;
 
 /** 
@@ -16,6 +16,11 @@
 
   --white: #fff;
   --black: #000;
+}
+
+::selection{
+  color: var(--white);
+  background-color: var(--contrast-color);
 }
 
 h1,
@@ -46,7 +51,7 @@ main {
 }
 
 .items:hover {
-  transform: 1s;  /* Olhar Transform */
+  transform: 1s; /* Olhar Transform */
   font-family: "Poppins", sans-serif;
   opacity: 100%;
 }
@@ -63,41 +68,54 @@ main {
 }
 
 li.nav-item {
-  padding-left: 20px;
-  font-family: "Poppins", sans-serif;
+  padding-left: 20px !important;
+  font-family: "Poppins", sans-serif !important;
 }
 
-#link1 {
-  border: 2px solid;
-  border-color: var(--detail-color);
-  color: var(--detail-color);
-  font-family: "Poppins", sans-serif;
+li.nav-item .nav-link {
+  color: var(--primary-green);
 }
 
-#link1:hover {
+li.nav-item .nav-link:hover {
+  transition: 0.4s !important;
+  color: var(--detail-color) !important;
+}
+
+li.nav-item #item1 {
+  color: var(--contrast-color) !important;
+}
+
+.link1 {
+  border: 2px solid !important;
+  border-color: var(--detail-color) !important;
+  color: var(--detail-color) !important;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.link1:hover {
+  transition: 0.4s !important;
+  opacity: 70% !important;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.link2 {
+  background-color: var(--detail-color) !important;
+  color: var(--white) !important;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.link2:hover {
   transition: 0.4s;
   opacity: 70%;
-  font-family: "Poppins", sans-serif;
-}
-
-#link2 {
-  background-color: var(--detail-color);
-  color: var(--white);
-  font-family: "Poppins", sans-serif;
-}
-
-#link2:hover {
-  transition: 0.4s;
-  opacity: 70%;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif !important;
 }
 
 .descricao {
-  border: 20px solid var(--white);
-  background-color: var(--white);
-  font-family: "Poppins", sans-serif;
-  font-size: 30px;
-  font-weight: bold;
+  border: 20px solid var(--white) !important;
+  background-color: var(--white) !important;
+  font-family: "Poppins", sans-serif !important;
+  font-size: 30px !important;
+  font-weight: bold !important;
 }
 
 /*Banner*/
@@ -251,5 +269,12 @@ footer {
 
   .descricaoreddito {
     margin: 10px;
+  }
+
+  .collap-ajuste {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 }
