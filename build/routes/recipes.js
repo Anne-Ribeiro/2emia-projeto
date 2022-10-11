@@ -46,8 +46,9 @@ function default_1(app) {
                 (0, DeleteSecret_1.default)(res);
                 return res.send(`Não foi possivel assinar sua autenticação`);
             }
-            console.log(req.cookies);
-            res.render("create.ejs");
+            let retorno = yield recipes_1.recipes.find({ Email: email });
+            console.log(retorno);
+            res.render("create.ejs", { retorno });
         });
     });
     app.post("/create", function (req, res) {
@@ -77,16 +78,97 @@ function default_1(app) {
             if (dados.descricao.length > lenthP) {
                 return res.send(`O comprimento da descrição é maior que o permitido. ${dados.descricao.length} > ${lenthP}`);
             }
-            let gravar = yield new recipes_1.recipes({
-                Titulo: dados.titulo,
-                Email: dados.email,
-                Descricao: dados.descricao,
-                Porcoes: dados.porcoes,
-                Imagem: dados.imagem,
-                Ingredientes: dados.ingredientes,
-                Preparo: dados.preparo,
-            }).save();
-            res.send("ok");
+            try {
+                let gravar = yield new recipes_1.recipes({
+                    Titulo: dados.titulo,
+                    Email: email,
+                    Descricao: dados.descricao,
+                    Porcoes: dados.porcoes,
+                    Imagem: dados.imagem,
+                    Ingredientes: dados.ingredientes,
+                    Preparo: dados.preparo,
+                }).save();
+            }
+            catch (err) {
+                console.log(err);
+                return res.send("nem todos os campos foram preenchidos");
+            }
+            res.redirect("/create");
+        });
+    });
+    app.post("/update", function (req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            let dados = req.body;
+            let jwt = req.cookies.jwt;
+            let email = req.cookies.email;
+            let consulta = yield users_1.users.findOne({
+                Email: email,
+            });
+            if (consulta === null) {
+                (0, DeleteSecret_1.default)(res);
+                return res.send(`Não foi possivel encontrar o email ${email}`);
+            }
+            try {
+                let result = (0, Tokens_1.verifyToken)({
+                    analise_token: jwt,
+                    secret: consulta.JWT,
+                });
+            }
+            catch (err) {
+                console.error(err);
+                (0, DeleteSecret_1.default)(res);
+                return res.send(`Não foi possível assinar o jwt`);
+            }
+            try {
+                let update = yield recipes_1.recipes.findOneAndUpdate({
+                    _id: dados._id,
+                    Email: email,
+                }, {
+                    Titulo: dados.titulo,
+                    Email: email,
+                    Descricao: dados.descricao,
+                    Porcoes: dados.porcoes,
+                    Imagem: dados.imagem,
+                    Ingredientes: dados.ingredientes,
+                    Preparo: dados.preparo,
+                    Alterado: true,
+                });
+            }
+            catch (err) {
+                console.log(err);
+                return res.send("campos essenciais não foram preenchidos");
+            }
+            res.redirect("/create");
+        });
+    });
+    app.post("/delete", function (req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            let dados = req.body;
+            let jwt = req.cookies.jwt;
+            let email = req.cookies.email;
+            let consulta = yield users_1.users.findOne({
+                Email: email,
+            });
+            if (consulta === null) {
+                (0, DeleteSecret_1.default)(res);
+                return res.send(`Não foi possivel encontrar o email ${email}`);
+            }
+            try {
+                let result = (0, Tokens_1.verifyToken)({
+                    analise_token: jwt,
+                    secret: consulta.JWT,
+                });
+            }
+            catch (err) {
+                console.error(err);
+                (0, DeleteSecret_1.default)(res);
+                return res.send(`Não foi possível assinar o jwt`);
+            }
+            let del = yield recipes_1.recipes.findOneAndDelete({
+                _id: dados._id,
+                Email: email,
+            });
+            res.redirect("/create");
         });
     });
 }
