@@ -1,0 +1,132 @@
+<!-- Tela após cadastro, contendo o perfil.
+Após ser logado, deve vir diretamente para essa página, aonde terá a opção de perfil -->
+<!-- Fazer a conexão após o login ou cadastro -->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Título da homepage - Após o Login</title>
+  <meta name="description" content="Descrever o site (máximo 150 caracteres)">
+  <!-- CSS Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <!-- CSS Customizado -->
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Favicon -->
+  <link rel="icon" href="./img/logo-da-pag.png">
+</head>
+
+<body>
+  <!-- Menu -->
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="btn" id="link2" href="/meu-perfil.html" role="button">Meu Perfil</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn" id="link1" href="/index-apos-cadastro.html" role="button">Voltar para a página inicial</a>
+          </li>
+        </ul>
+        <div class="opcoesmenu">
+          <ul class="nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link" href="/galeria.html" id="item2">Galeria</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn" id="link1" href="" role="button">Minhas Receitas</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!--Cards -->
+  <!--Entrada para o Backend, receitas mais populares-->
+  <section class="container" id="recpopulares">
+    <h3 id="populares"> SUAS RECEITAS </h3>
+    <div class="card-group">
+      <div class="card">
+        <img src="/img/strogonoffdefrango.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Nome da Receita</h5>
+          <p class="card-text">Breve descrição do que é</p>
+          <!--Entrada para o Backend, alerta de produtos-->
+          <div class="listinha">
+            <div class="configlista">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item list-group-item-warning">⚠️ Receita Pública</li>
+              </ul>
+            </div>
+          </div>
+          <a href="/receita1.html" class="btn" id="link2" role="button">Visualizar minha postagem</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/img/lasanha.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Nome da Receita</h5>
+          <p class="card-text">Breve descrição do que é</p>
+          <!--Entrada para o Backend, alerta de produtos que as pessoas podem  restrições-->
+          <div class="listinha">
+            <div class="configlista">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item list-group-item-warning">⚠️ Receita Pública</li>
+              </ul>
+            </div>
+          </div>
+          <div class="botao"></div>
+          <a href="/receita2.html" class="btn" id="link2" role="button">Visualizar minha postagem</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/img/escondidinho.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Nome da receita</h5>
+          <p class="card-text">Breve descrição do que é</p>
+          <!--Entrada para o Backend, alerta de produtos-->
+          <div class="listinha">
+            <div class="configlista">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item list-group-item-warning">⚠️ Rascunho</li>
+              </ul>
+            </div>
+          </div>
+          <a href="/receita 3.html" class="btn" id="link2" role="button">Visualizar minha postagem</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="container-fluid">
+    <div class="container flexFooter">
+      <div class="img">
+        <img src="./img/Reditto - LOGOS  (3) 2footer-logo.png" width="100px" alt="">
+      </div>
+      <div class="textofooter">
+        <p class="pmaiordofooter">@Copyright - Criado em 27/09/2022</p>
+        <p class="pmenordofooter">Reddito, todos os direitos reservados. Proibida a reprodução sem autorização. <strong>Site ficticio com finalidade acadêmica.</strong></p>
+      </div>
+      <div id="social">
+        <a href="pag-continuidade.html" target="_blank"><img src="img/instagram.png" alt="Instagram" class="instagram"></a>
+        <a href="pag-continuidade.html"><img src="img/facebook.png" alt="Facebook" class="facebook"></a>
+        <a href="pag-continuidade.html"><img src="img/youtube.png" alt="YouTube" class="youtube"></a>
+      </div>
+    </div>
+  </footer>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
+  </script>
+</body>
+</html>

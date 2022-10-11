@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Título da homepage</title>
+  <meta name="description" content="Descrever o site (máximo 150 caracteres)">
+  <!-- CSS Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <!-- CSS Customizado -->
+  <link rel="stylesheet" href="/css/visu-receita.css">
+  <!-- Favicon -->
+  <link rel="icon" href="./img/logo-da-pag.png">
+</head>
+
+<section>
+  <!-- Menu -->
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="/img/logohomepage.png" alt="Descrição da Imagem" width="85px" height="85px">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="btn" id="link2" href="/index-apos-cadastro.html" role="button">Voltar</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Formulário -->
+  <!-- Entrada para o Backend com as informações já preenchidas e envidas para essa página de visualização -->
+  <section class="container-fluid d-flex flex-column justify-content-top align-items-center">
+    <form action="">
+      <div class="card mb-5 mt-5">
+        <div class="card-body">
+          <h5 class="card-title">Cadastre sua receita</h5>
+          <!--Nome do dono do perfil-->
+          <p class="descricao-receita">@nomedeusuariodo</p>
+          <!--
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae lorem nulla. Integer dui magna, commodo non mi eget, consequat posuere est. Fusce quis lobortis tellus. Proin efficitur tristique auctor. Sed suscipit molestie sodales. Sed cursus ipsum ligula, ac pretium est ullamcorper vitae. Fusce porttitor, tellus at ultricies bibendum, mauris felis convallis felis, vitae ullamcorper eros turpis sollicitudin nisl. Sed enim nisl, luctus iaculis erat eu, vulputate lacinia orci. Nullam id felis leo. In ut justo eu justo varius volutpat ac non massa. Quisque in elementum turpis.</p>
+          <a href="#" class="btn btn-primary">Visitar</a>
+          -->
+          <!-- Input, nome da receita -->
+          <div class="form-group">
+            <label for="formGroupExampleInput"><strong>Nome da Receita:</strong></label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Torta de Frango">
+          </div><br>
+          <!-- Input yes/no -->
+          <div class="form-group">
+            <label for="inputState"><strong>Essa receita é autoral?</strong></label>
+            <select id="inputState" class="form-control">
+              <option selected>...</option>
+              <option>Sim</option>
+              <option>Não</option>
+            </select>
+          </div><br>
+           <!-- Input de Autoria/Créditos -->
+          <div class="form-group">
+            <label for="formGroupExampleInput"><strong>Se não for autoral, coloque os créditos do autor:</strong></label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Feito por Nome Sobrenome @doautor" required><br>
+          </div>
+           <!-- Input Ingredientes -->
+          <div class="form-group">
+            <label for="inputState"><strong>Ingredientes:</strong></label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" style="resize: none" placeholder="2 ovos, 2 colheres de açucar, 2 copos de óleo..." required></textarea>
+          </div><br>
+          <!-- Input Modo de Preparo -->
+          <div class="form-group">
+            <label for="inputState"><strong>Modo de preparo:</strong></label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" style="resize: none" placeholder="Primeiro, misture os secos em uma bacia..."  required></textarea>
+          </div><br>
+          <!-- Input mais informações -->
+          <div class="form-group">
+            <label for="inputState"><strong>Mais Informações:</strong></label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" style="resize: none" placeholder="Parte opcional"></textarea>
+            <p class="observacao">Adicione a história, curiosidades e mais informações sobre a sua receita se achar necessário.</p>
+          </div><br>
+          <label for="inputEmail4"><strong>Marque os ingredientes que a sua receita contém:</strong></label><br>
+          <div class="form-check form-check-inline mt-2">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="opcao1">
+            <label class="form-check-label" for="inlineCheckbox1">Glúten</label>
+          </div>
+          <div div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="opcao2">
+            <label class="form-check-label" for="inlineCheckbox2">Açucar</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="opcao2">
+            <label class="form-check-label" for="inlineCheckbox2">Soja</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="opcao2">
+            <label class="form-check-label" for="inlineCheckbox2">Leite</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="opcao2">
+            <label class="form-check-label" for="inlineCheckbox2">Trigo</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="opcao2">
+            <label class="form-check-label" for="inlineCheckbox2">Nenhum dos itens anteriores</label>
+          </div><br>
+        </div>
+        <button type="button" class="btn btn-success btn-block m-3">Cadastrar Receita</button>
+    </form>
+  </section>
+  
+  
+
+  <!-- Rodapé -->
+  <footer class="container-fluid">
+    <div class="container flexFooter">
+      <div class="img">
+        <img src="./img/Reditto - LOGOS  (3) 2footer-logo.png" width="100px" alt="">
+      </div>
+      <div class="textofooter">
+        <p class="pmaiordofooter">@Copyright - Criado em 27/09/2022</p>
+        <p class="pmenordofooter">Reddito, todos os direitos reservados. Proibida a reprodução sem autorização. <strong>Site ficticio com finalidade acadêmica.</strong></p>
+      </div>
+      <div id="social">
+        <a href="pag-continuidade.html" target="_blank"><img src="img/instagram.png" alt="Instagram" class="instagram"></a>
+        <a href="pag-continuidade.html"><img src="img/facebook.png" alt="Facebook" class="facebook"></a>
+        <a href="pag-continuidade.html"><img src="img/youtube.png" alt="YouTube" class="youtube"></a>
+      </div>
+    </div>
+  </footer>
+  
+
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
+  </script>
+</body>
+</html>

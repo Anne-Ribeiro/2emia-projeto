@@ -16,7 +16,7 @@ body{
 }
 
 /** Banner **/
-main{
+section{
     background-color: #466633;
 }
 
@@ -103,23 +103,7 @@ li.nav-item{
     color: #6b9453;
 }
 
-/*Formulário*/
-.informacoes{
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.inputsperfil{
-    font-size: 15px;
-}
-
-/*Biografia*/
-.green-border-focus .form-control:focus {
-    border: 1px solid #8bc34a;
-    box-shadow: 0 0 0 0.2rem rgba(139, 195, 74, .25);
-}
-
-
+/*Composição*/
 .alertaform{
     font-size: 13px;
     color: #de3c2f;
@@ -128,6 +112,56 @@ li.nav-item{
 .semlogin{
     margin-top: 12px;
 }
+
+/*Card receita*/
+.perguntas{
+    font-size: 18px;
+}
+
+.subtitulo-card{
+    font-size: 17px;
+    color: #466633;
+}
+
+h1{
+    font-size: 35px;
+}
+
+.card-title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.descricao-receita{
+    font-size: 18px;
+    color: #7e7e7e;
+    text-align: center;
+    font-weight: bold;
+    opacity: 90%;
+}
+
+.subtitle-card{
+    font-size: 18px;
+    font-weight: bold;
+    color: #466633;
+}
+
+.text{
+    text-align: justify;
+}
+
+.termosdeuso{
+    text-align: justify;
+    padding: 20px;
+}
+
+.observacao{
+    font-size: 14px;
+    opacity: 50%;
+    font-weight: bold;
+}
+
 
 /*Footer*/
 footer {
@@ -189,6 +223,10 @@ footer {
 
     .descricaoreddito{
         margin: 10px;
+    }
+
+    .card{
+        width: 50rem;
     }
 }
 

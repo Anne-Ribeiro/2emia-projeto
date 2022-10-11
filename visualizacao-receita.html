@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Título da homepage</title>
+  <meta name="description" content="Descrever o site (máximo 150 caracteres)">
+  <!-- CSS Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <!-- CSS Customizado -->
+  <link rel="stylesheet" href="/css/visu-receita.css">
+  <!-- Favicon -->
+  <link rel="icon" href="./img/logo-da-pag.png">
+</head>
+
+<section>
+  <!-- Menu -->
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="/img/logohomepage.png" alt="Descrição da Imagem" width="85px" height="85px">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="btn" id="link2" href="/index-apos-cadastro.html" role="button">Voltar</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Formulário -->
+  <!-- Entrada para o Backend com as informações já preenchidas e envidas para essa página de visualização -->
+  <section class="container-fluid d-flex flex-column justify-content-top align-items-center">
+    <div class="card mb-5 mt-5">
+      <img class="card-img-top" src="/img/receita do dia.png" alt="Imagem de capa do card">
+      <div class="card-body">
+        <h5 class="card-title">Nome da Receita</h5>
+        <!--Nome do usuário que enviou a receita que está em top trends-->
+        <p class="descricao-receita">Enviado por @juliesanday</p>
+        <!--
+        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae lorem nulla. Integer dui magna, commodo non mi eget, consequat posuere est. Fusce quis lobortis tellus. Proin efficitur tristique auctor. Sed suscipit molestie sodales. Sed cursus ipsum ligula, ac pretium est ullamcorper vitae. Fusce porttitor, tellus at ultricies bibendum, mauris felis convallis felis, vitae ullamcorper eros turpis sollicitudin nisl. Sed enim nisl, luctus iaculis erat eu, vulputate lacinia orci. Nullam id felis leo. In ut justo eu justo varius volutpat ac non massa. Quisque in elementum turpis.</p>
+        <a href="#" class="btn btn-primary">Visitar</a>
+        -->
+        <p class="subtitle-card">Ingredientes:</p>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">-Exemplo</li>
+          <li class="list-group-item">-Exemplo</li>
+          <li class="list-group-item">-Exemplo</li>
+          <li class="list-group-item">-Exemplo</li>
+          <li class="list-group-item">-Exemplo</li>
+          <li class="list-group-item">-Exemplo</li>
+          <li class="list-group-item">-Exemplo</li>
+        </ul><br>
+        <p class="subtitle-card">Modo de Preparo:</p>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">1- Exemplo</li>
+          <li class="list-group-item">2- Exemplo</li>
+          <li class="list-group-item">3- Exemplo</li>
+          <li class="list-group-item">4- Exemplo</li>
+          <li class="list-group-item">5- Exemplo</li>
+          <li class="list-group-item">6- Exemplo</li>
+          <li class="list-group-item">7- Exemplo</li>
+        </ul><br>
+        <p class="subtitle-card">Informações Adicionais:</p>
+        <p class="text"> Sed nisi ex, sodales condimentum ligula ac, tempus aliquet purus. Quisque porttitor, orci in ultrices dignissim, nibh enim iaculis sapien, non molestie lectus odio et enim. In accumsan enim eu mauris pellentesque, sit amet dignissim risus pretium. Proin varius, ipsum non efficitur hendrerit, nisl enim luctus velit, tristique convallis enim nibh in metus. Aenean lacinia erat ut quam viverra finibus sed in ex. Nulla molestie ullamcorper interdum. Suspendisse fermentum tristique lobortis. Aliquam erat volutpat. Cras tempus tincidunt nisi in sodales. Curabitur molestie augue in rhoncus tempus.</p>
+        <a href="/" class="btn" id="link2" role="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">AVISO - Reforçando Informações</a>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Avisos - Reforçando Informações</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Essa receita pode conter alguns itens que talvez você seja intolerante: </p>
+                <p> Confira se essa receita não tem:</p>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item list-group-item-warning">⚠️ Glúten</li>
+                  <li class="list-group-item list-group-item-warning">⚠️ Soja</li>
+                  <li class="list-group-item list-group-item-warning">⚠️ Trigo</li>
+                  <li class="list-group-item list-group-item-warning">⚠️ Lactose</li>
+                  <li class="list-group-item list-group-item-warning">⚠️ Açucar</li>
+                </ul><br>
+                <p><strong>Lembrando, não somos responsáveis por qualquer ocorrido com o usuário a partir das receitas, não esqueca de conferir os nossos </strong><a href="/termos-de-uso.html">Termos de Uso</a></p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Entendido</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </section>
+  
+
+  <!-- Rodapé -->
+  <footer class="container-fluid">
+    <div class="container flexFooter">
+      <div class="img">
+        <img src="./img/Reditto - LOGOS  (3) 2footer-logo.png" width="100px" alt="">
+      </div>
+      <div class="textofooter">
+        <p class="pmaiordofooter">@Copyright - Criado em 27/09/2022</p>
+        <p class="pmenordofooter">Reddito, todos os direitos reservados. Proibida a reprodução sem autorização. <strong>Site ficticio com finalidade acadêmica.</strong></p>
+      </div>
+      <div id="social">
+        <a href="pag-continuidade.html" target="_blank"><img src="img/instagram.png" alt="Instagram" class="instagram"></a>
+        <a href="pag-continuidade.html"><img src="img/facebook.png" alt="Facebook" class="facebook"></a>
+        <a href="pag-continuidade.html"><img src="img/youtube.png" alt="YouTube" class="youtube"></a>
+      </div>
+    </div>
+  </footer>
+  
+
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
+  </script>
+</body>
+</html>

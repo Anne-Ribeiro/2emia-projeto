@@ -1,3 +1,4 @@
+<!-- Meu perfil, página após o clique do botão meu perifl, ou imagem -->
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -30,7 +31,8 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="btn" id="link2" href="/index.html" role="button">Voltar</a>
+            <!-- Sempre voltar para a página anterior /SE CONSEGUIR -->
+            <a class="btn" id="link2" href="/meu-perfil.html" role="button">Voltar para o meu perfil</a>
           </li>
         </ul>
       </div>
@@ -39,43 +41,32 @@
 
   <!-- Formulário -->
   <main class="container-fluid d-flex flex-column justify-content-top align-items-center">
-    <div class="descricaoreddito mt-5 mb-5">
-      <h1 class="titulo">CADASTRE-SE</h1>
-      <h2 class="subtitulo">Preencha com as sua informações pessoais para finalizar o cadastro.</h2>
+    <div class="descricaoreddito mt-5">
+      <h1 class="titulo">Alteração de Senha:</h1>
+      <h2 class="subtitulo">Descreva o problema e a nova senha desejada, retornaremos pelo email cadastrado.</h2> <br>
       <form>
-        <!-- Nome Completo -->
-        <div class="form-row">
+        <!-- Alterar email -->
+        <div class="biografia">
           <div class="form-group col mt-2">
-            <label for="inputEmail4">Nome Completo:</label>
-            <input type="text" class="form-control" id="inputEmail4" required>
-          </div>
-          <!-- Email -->
-          <div class="form-group col mt-2">
-            <label for="inputEmail4">Email:</label>
-            <input type="email" class="form-control" id="inputEmail4" required>
-          </div>
-          <!-- Senha -->
-          <div class="form-group col mt-2">
-            <label for="inputPassword4">Password:</label>
+            <label for="inputPassword4">Nova Senha:</label>
             <input type="password" class="form-control" id="inputPassword4" required>
             <small id="passwordHelpBlock" class="form-text text-muted">
               Sua senha deve ter entre 8 e 20 caracteres, os quais devem ser letras e números, sem espaços, caracteres especiais ou emojis.
             </small> <br> <br>
           </div>
-        </div>
-        <div class="form-group">
-          <div class="form-check mt-2">
-            <input class="form-check-input" type="checkbox" id="gridCheck" required>
-            <label class="form-check-label" for="gridCheck">
-              Concordo com os <a href="/termos-de-uso.html" class="termosdeuso">Termos de Uso</a> e as condições estabelecidas.
-            </label>
-          </div>
-        </div>
-        <button type="submit" class="btn btn-primary mt-3" id="link2" style="border: none;">Enviar</button>
+          <div class="alteracao">
+            <select class="form-control" required>
+              <option selected disabled value="">Motivo para a solicitação, clique para selecionar</option>
+              <option value="">Esqueci minha senha</option>
+              <option value="">Arrependimento pela senha que coloquei anteriormente</option>
+              <option value="">Outro</option>
+            </select>
+          </div> <br>
+        <!-- Deve ser alteradas as informações -->
+        <button type="submit" class="btn btn-success mb-3">Salvar alterações</button>
       </form>
     </div>
   </main>
-
 
   <!-- Rodapé -->
   <footer class="container-fluid">
