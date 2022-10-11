@@ -1,13 +1,12 @@
 /** @format */
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 /*Chamando a fonte: font-family: 'Poppins', sans-serif;
 
 /** 
 * Folha de estilo customizada do site...
-* @author: Thiago
+* @author: Heloísa Real, Mateus Felipe da Silveira Vieira, Anne dos Santos Ribeiro, Carolina Barbosa Pacífico de Almeida, Julie Missae Sanday, Maria Clara Gomes Gonçalves
 */
-
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -20,6 +19,11 @@ body {
 /** Banner **/
 section {
   background-color: #466633;
+}
+
+.lwi {
+  width: 85px;
+  height: auto;
 }
 
 #item1,
