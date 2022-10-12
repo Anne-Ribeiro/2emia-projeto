@@ -12,17 +12,31 @@ li.nav-item {
   list-style: none;
 }
 
-#link1 {
-  background-color: #7dad61;
-  color: #fff;
-  font-family: "Poppins", sans-serif;
+.link1 {
+  border: 2px solid !important;
+  border-color: #7dad61 !important;
+  color: #7dad61 !important;
+  font-family: "Poppins", sans-serif !important;
 }
 
-#link1:hover {
-  transition: 0.4s;
-  opacity: 70%;
-  font-family: "Poppins", sans-serif;
+.link1:hover {
+  transition: 0.4s !important;
+  opacity: 70% !important;
+  font-family: "Poppins", sans-serif !important;
 }
+
+.link2 {
+  background-color: #7dad61 !important;
+  color: #fff !important;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.link2:hover {
+  transition: 0.4s !important;
+  opacity: 70% !important;
+  font-family: "Poppins", sans-serif !important;
+}
+
 
 .escrita {
   font-family: "Poppins", sans-serif;
