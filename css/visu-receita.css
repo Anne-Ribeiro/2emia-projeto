@@ -76,9 +76,9 @@ li.nav-item {
 }
 
 .link2:hover {
-  transition: 0.4s;
-  opacity: 70%;
-  font-family: "Poppins", sans-serif;
+  transition: 0.4s !important;
+  opacity: 70% !important;
+  font-family: "Poppins", sans-serif !important;
 }
 
 .descricao {
