@@ -1,6 +1,7 @@
 <!-- @format -->
 
 ![GitHub](https://img.shields.io/github/license/Anne-Ribeiro/2emia-projeto?style=for-the-badge)
+![W3C Validation](https://img.shields.io/w3c-validation/default?style=for-the-badge&targetUrl=https%3A%2F%2Fanne-ribeiro.github.io%2F2emia-projeto%2F)
 
 # Título do projeto
 
