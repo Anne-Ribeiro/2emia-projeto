@@ -13,4 +13,4 @@ Um site de cadastro de receitas pessoais, possibilitando a acessibilidade dos us
 [Link da Wiki](https://github.com/Anne-Ribeiro/2emia-projeto/wiki)
 
 #### Wireframe:
-[Link do Figma]()
+[Link do Figma](https://www.figma.com/file/PAi5AsoNKT0S5ph4ol4u3L/Reddito?node-id=0%3A1)
