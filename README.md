@@ -1,4 +1,5 @@
-![GitHub](https://img.shields.io/github/license/Anne-Ribeiro/2emia-projeto?style=for-the-badge)
+![GitHub](https://img.shields.io/github/license/Anne-Ribeiro/2emia-projeto?style=for-the-badge) 
+![GitHub](http://img.shields.io/static/v1?label=STATUS:&message=%20PROJETO%20EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 # Reddito
 Um site de cadastro de receitas pessoais, possibilitando a acessibilidade dos usuários de forma simples e intuitiva. Também promovemos o compartilhamento delas e a opção de dar notas e observações para as receitas feitas.
 ## Autores 
